@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 예제</title>
+</head>
+<body>
+    <form action="boardwrite" method="POST">
+        제목: <input type="text" name="btitle" value="제목입니다." readonly><br>
+        <!-- value: 미리 써놓는 형식. 글 수정 시 활용 // 읽기전용: 사용자에 의해 바꾸지 못하게끔-->
+        작성자: <input type="text" name="bwriter" placeholder="작성자쓰세요."><br>
+        비밀번호: <input type="password" name="password"><br>
+        내용: <br><textarea name="bcontents" rows="10" cols="50"></textarea><br>
+        카테고리: <select name="bcategory">
+            <option selected>선택하세요</option>
+            <option value="study">공부</option>
+            <option value="journey">여행</option>
+            <option value="hobby">취미</option>
+        </select><br>
+        전체공개여부: 
+        <input type="radio" name="bopen" value="yes">예
+        <input type="radio" name="bopen" value="no">아니오<br>
+        <input type="submit" value="발행"><br>
+        <!-- form태그 내에 있는 button태그: submit 역할. submit 보다 css 활용↑
+                                        *클릭 시, 무조건 제출됨. javascript 때 분리 교육 예정. -->
+        <button>글작성버튼</button>
+    </form>
+</body>
+</html>

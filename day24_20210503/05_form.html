@@ -9,7 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- form 태그 -->
+    <!-- form 태그: 회원가입, 로그인, 글쓰기, 수정, 검색
+                    "전송하는것이 목적 어디로? 서버(백엔드)" -->
     <form>
         아이디: <input type="text" id="id1" name="name1" placeholder="아이디를 입력하세요."> <br>
         <!-- input: 입력을 받을 수 있는 태그 -->
@@ -42,7 +43,7 @@
                 <!-- 디테일적인 요소 추가. -->
                 <input type="radio" id="female" name="gender" value="female">
                 <label for="female">여</label><br>
-        <!-- radio버튼: **name값이 똑같아야 한다! 하나의 변수! value속성값은 반드시 다르게! -->
+        <!-- radio버튼(택일): **name값이 똑같아야 한다! 하나의 변수(parameter)! value속성값은 반드시 다르게! -->
     <!-- UI(User Interface): 디자인
         UX(User eXperience): 사용성 -->
         사용경험 프로그래밍 언어:
@@ -58,5 +59,6 @@
         <input type="number" name="quan" min="1" max="10" step="2">
 
     </form>
+    <!-- input은 무조건 form태그 안에서만 사용! -->
 </body>
 </html>
