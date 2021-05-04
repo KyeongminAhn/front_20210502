@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            border: 5px solid red;
+            /* margin: 100px; --- 사방 적용 */
+            /* margin: 100px 50px; --- 위아래 왼오 */
+            /* 4개 값: 위에서부터 시계방향(위 오른 아래 왼) */
+            margin: 100px 50px 200px 10px;
+            /* margin-top: 100px;
+            margin-right: 50px;
+            margin-bottom: 200px;
+            margin-left: 10px; --- 이렇게 각각 부여도 가능.*/
+        }
+        #div2 {
+            /* width: 500px; */
+            /* %: 전체 페이지에서 차지하는 공간 표시 */
+            width: 50%;
+            border: 5px solid green;
+            padding: 0px;
+            /* padding: 50px; --- 사방 적용 */
+            /* padding: 20px 100px; --- 위아래 왼오 */
+            /* 4개 값: 위에서부터 시계방향(위 오른 아래 왼) */
+            /* padding: 10px 20px 100px 150px; */
+            margin: 0px;
+        }
+        #div3 {
+            border: 5px solid blue;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- margin: 해당 요소의 바깥쪽 여백
+         padding: 해당 요소의 안쪽 여백 -->
+    <div id="div1">
+        div1
+    </div>
+
+    <div id="div2">
+        div2
+    </div>
+
+    <div id="div3">
+        div3
+    </div>
+</body>
+</html>
