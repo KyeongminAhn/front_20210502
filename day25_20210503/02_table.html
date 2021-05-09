@@ -9,11 +9,13 @@
             border: 1px solid red;
             /* 선 통합 */
             border-collapse: collapse;
+            /* 안쪽 여백 */
             padding: 20px;
         }
         td {
             text-align: center;
         }
+        /* css 가상 클래스(선택자): n번째 자식(n값)을 선택. */
         tr:nth-child(even) {
             background-color: yellow;
         }
@@ -34,7 +36,7 @@
     <table>
         <!-- tr: 새로운 행(row) 추가 -->
         <tr>
-            <!-- td: 새로운 열(column), 실질 데이터 추가 -->
+            <!-- td: 열. 정확히는 테이블 내 실제 '데이터'가 추가된다는 의미. -->
             <td>1</td>
             <td>2</td>
         </tr>
@@ -55,11 +57,15 @@
         <!-- 표제 -->
         <caption>학생정보</caption>
         <tr>
+            <!-- 테이블에서 제목이 되는 헤더 셀(header cell).
+                굵은 폰트, 중앙 정렬. -->
             <th>이름</th>
             <th>이메일주소</th>
             <th>전화번호</th>
         </tr>
         <tr>
+            <!-- 일반적인 데이터를 저장하는 데이터 셀(data cell).
+                일반 폰트, 좌측 정렬. -->
             <td>학생1</td>
             <td>aa@aa</td>
             <td>010-1111-1111</td>

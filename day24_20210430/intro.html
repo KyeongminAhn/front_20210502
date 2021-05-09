@@ -1,6 +1,7 @@
 <!-- html5 버전 -->
 <!DOCTYPE html>
-<!-- HTML은 모든 게 태그<>로 이뤄져~: 시작태그, 종료태그가 함께 있다. 그 사이의 내용은 태그의 소속이 된다. <*>내용</*> -->
+<!-- HTML은 모든 게 태그<>로 이뤄져~: 시작태그, 종료태그가 함께 있다. 
+    그 사이의 내용은 태그의 소속이 된다. <*>내용</*> -->
 <!-- html 언어 기반, 어떤 언어의 페이지인지 확인 가능. ex)한국어 "ko" -->
 <html lang="en">
 <!-- 최상위 태그 -->
@@ -9,7 +10,7 @@
         <meta charset="UTF-8">
 
         <title>Document</title>
-        <!-- 탭에 작성되는 내용 -->
+        <!-- HTML문서 제목. 브라우저 타이틀에 표시 -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     </head>
@@ -20,6 +21,8 @@
         화면에 보여줄 내용 작성
         <h1 style="background-color: green;">제목</h1>
         <!-- Headline: 제목을 위한 태그 -->
+        <!-- paragraph: 하나의 문단. 
+            위의 일반 text와 다르게 문단 사이에 공백 라인이 들어감. -->
         <p>해당 내용을 작성합니다.</p>
         <h2 style="background-color: red;">제목</h2>
         <h3>제목</h3>
@@ -28,7 +31,8 @@
         <h6>제목</h6>
         <a href="https://www.google.co.kr/">링크내용</a>
         <!-- 링크 태그 a: 클릭했을 때 해당화면으로 이동하는 것. -->
-        <!-- 태그 안에 작성하는 걸 "속성(Attribute)" 이라고 한다. "*": 속성값에 주소값을 작성.-->
+        <!-- 태그 안에 작성하는 걸 "속성(Attribute)" 이라고 한다. 
+            "*": 속성값에 주소값을 작성.-->
         <!-- 기능, 간단한css 적용을 위해 속성을 사용한다. -->
         <h1 style="font-family: 'Do Hyeon', sans-serif;">
             구글 폰트 적용한 내용</h1>
@@ -64,13 +68,14 @@
         <!-- 이미지 삽입 : img태그-시작,종료태그 구분이 따로 없다.
             src 속성값: 그림경로 -->
         <img src="/images/googlelogo_color_160x56dp.png" style="width:200px; height:100px;">
-        <!-- img의 width, height 속성 / style속성 사용 시, 세미콜론(;)으로 구분.-->
+        <!-- img의 style속성(width, height) 사용 시, 세미콜론(;)으로 구분.-->
         <img src="/images/googlelogo_color_160x56dp.pn" width="300" height="150" alt="구글이미지">
         <!-- img속성인 width,hight 바로 사용 가능 / alt: 이미지 파일 깨졌을 때 덧붙임 설명 용도 -->
         
-        <!-- 이미지를 링크로 활용할 때: 시작 종료태그 사이에 이미지 삽입해준다. -->
+        <!-- 이미지를 링크로 활용할 때: 링크태그a의 시작 종료태그 사이에 이미지를 삽입한다. -->
         <a href="https://google.co.kr" target="_blank">
-                                        <!-- target속성:현재창 혹은 새 탭에서 열기 -->
+                            <!-- target속성:링크를 클릭했을 때, 문서 열릴 위치 지정. 
+                                _blank: 새 탭에서 열기 -->
             <img src="/images/googlelogo_color_160x56dp.png" width="100" height="50">
         </a>
         

@@ -9,7 +9,7 @@
 <body>
     <!-- form태그에서 작성한 값을 서버로 전송 -->
     <!-- action속성: form태그에서 작성한 값을 전송할 목적지
-                    : 보통은 백엔드(서버)에서 지정한 주소값을 사용함. -->
+                    보통은 백엔드(서버)에서 지정한 주소값을 사용함. -->
     <form action="join">
         아이디: <input type="text" name="id"><br>
         비밀번호: <input type="password" name="password"><br>
@@ -29,11 +29,13 @@
 
     <!-- 가입 버튼을 클릭했더니 -->
     <!-- GET으로 전송하는 경우: 목적지 주소값과 보내는 데이터가 모두 노출 -->
+    GET 전송▼<br>
     join?id=aa&password=1234<br>
     today?var1=입력값1&var2=1234<br>
     <!-- join?~: 목적지로 가져가는 데이터, 물음표가 시작. -->
 
     <!-- POST로 전송하는 경우: 목적지 주소값만 보임 -->
+    POST 전송▼<br>
     today
 
     <!-- ***주소값을 봤을때 name값(변수)이 뭔지 잘 봐야한다.*** -->
