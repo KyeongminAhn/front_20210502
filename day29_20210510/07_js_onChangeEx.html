@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1() {
+            console.log('test1함수 호출');
+            var ele = document.getElementById('id1').value;
+            var domainValue = document.getElementById('domain');
+            domainValue.value = ele;
+            // 위의 두줄과 같은 기능
+            document.getElementById('domain').value = ele;
+        }
+    </script>
+</head>
+<body>
+    이메일: <input type="text">@<input type="text" id="domain">
+        <select id="id1" onchange="test1()">
+            <option selected>직접입력</option>
+            <option value="naver.com">naver.com</option>
+            <option value="gmail.com">gmail.com</option>
+            <option value="hanmail.net">hanmail.net</option>
+        </select>
+</body>
+</html>
+
+
+
+<!-- innerHTML(06) // value(07) 의 차이를 구분!
+    innerHTML 은 여는 태그와 닫는 태그 사이에 html을 의미.
+    <input value="값"/> 여기엔 value 를 사용
+    <div>값</div> 여기엔 innerHTML 을 사용 -->
