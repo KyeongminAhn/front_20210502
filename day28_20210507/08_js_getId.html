@@ -37,8 +37,8 @@
             }
             // 화면에 출력하기
             var arrPrint = "<ul>"
-            for(var i=0; i<arr.length;i++) {
-                arrPrint += "<li>"+arr[i]+"</li>";
+            for(var i=0; i<arr.length; i++) {
+                arrPrint += "<li style='color: red'>"+arr[i]+"</li>";
             }
             arrPrint += "</ul>";
             document.getElementById('id1').innerHTML = arrPrint;
@@ -50,6 +50,11 @@
     <h2>아래와 같이 함수호출 버튼을 클릭했을 때 목록으로 출력 해보세요.</h2>
     <div id="id1">
         id1 영역
+        <ul style="color: red;">
+            <li>첫번째</li>
+            <li>두번째</li>
+            <li>세번째</li>
+        </ul>
     </div>
 </body>
 </html>
