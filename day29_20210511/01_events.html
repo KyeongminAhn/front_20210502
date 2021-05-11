@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1() {
+            console.log('함수호출');
+        }
+        function test2() {
+            console.log('onkeyup 함수호출');
+            document.getElementById('id3').innerHTML = 
+                document.getElementById('id2').value;
+        }
+        function test3() {
+            console.log('onkeydown 함수호출');
+            document.getElementById('id5').innerHTML = 
+                document.getElementById('id4').value;
+        }
+    </script>
+</head>
+<body>
+    <!-- onblur는 벗어나는 순간 호출됐지만, onchange는 함수호출이 X
+    직전대비 변화가 있다면 함수호출이 된다. -->
+    입력1: <input type="text" id="id1" onchange="test1()"> <br>
+    <!-- 키보드 입력이 있을 때 event처리 中 onkeyup/down
+    키보드를 눌렀다 떼는 순간 event 발생
+        => value(텍스트)가 입력된 후 event실행 -->
+    입력2: <input type="text" id="id2" onkeyup="test2()"> <br>
+    <!-- 키보드에 눌린 순간 event 발생
+        => value(텍스트)가 입력되기 전 event실행.... onkeyup/down의 시점 차이가 있다. -->
+    입력3: <input type="text" id="id4" onkeydown="test3()"> <br>
+    <p id="id3"></p>
+    <p id="id5"></p>
+</body>
+</html>

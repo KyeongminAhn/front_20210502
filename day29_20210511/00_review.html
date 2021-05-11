@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1() {
+            // DOM(Document Object Model): document.getElement~~~
+            console.log(document.getElementById('id1')); // ← 태그 자체만 가져온다.
+            console.log(document.getElementById('id2')); // ← //(=내용값은 못가져오는)
+            console.log(document.getElementById('id1').innerHTML); // 아무것도 안나옴(단일태그이기에)
+            console.log(document.getElementById('id2').innerHTML); // innerHTML이 나온다.
+            console.log(document.getElementById('id1').value); // ← input태그에서만 입력한value값이 나온다.
+            console.log(document.getElementById('id2').value); // value가 없다.(undefined)
+            var ele = document.getElementById('id1');
+            console.log(ele);
+            // ▲ = ▼
+            console.log(ele.value);
+            var ele1 = document.getElementById('id3');
+            // 좌변: id3 입력 값
+            // 우변: id1 입력 값
+            // = id1에 입력한 값을 id3의 value로 지정함.
+            ele1.value = ele.value;
+
+            var ele2 = document.getElementById('id2');
+            // id1에 입력한 값을 id2의 innerHTML로 표현
+            ele2.innerHTML = ele.value;
+        }
+    </script>
+</head>
+<body>
+    <!-- 단일태그 -->
+    input 입력 : <input type="text" id="id1"> <br>
+    두번째 input : <input type="text" id="id3"> <br>
+    <!-- 시작종료태그 -->
+    <h2 id="id2">h2 태그내용</h2>
+    <button onclick="test1()">함수호출</button>
+</body>
+</html>

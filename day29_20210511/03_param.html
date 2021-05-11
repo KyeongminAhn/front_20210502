@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(var1) {
+            console.log('test1 함수호출');
+            console.log(var1); // this로 넘겨준 값이 어떻게 오는지 확인
+        }
+    </script>
+</head>
+<body>
+    <!-- 함수호출 시 매개 값 넘기기 -->
+    <!-- this: 태그 전체를 넘겨준다. -->
+    <!-- this.id: 태그 내 id속성값만 넘겨준다. -->
+    <!-- this.value: 태그 내 value속성값만 넘겨준다. -->
+    <!-- '싱글쿼터값': 순수 싱글쿼터값만 넘겨준다. -->
+    입력1: <input type="text" id="id1" value="기본값" onkeyup="test1('abcde')"> <br>
+</body>
+</html>
