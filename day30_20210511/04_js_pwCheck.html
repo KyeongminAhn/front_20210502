@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function pwCheck() {
+            // 입력값을 가져와서 일치하는지 판단
+            var pw = document.getElementById('pw').value;
+            var pwCheck = document.getElementById('pwCheck').value;
+            var result = document.getElementById('result');
+            if(pw == pwCheck) {
+                // 색이 먼저 지정되야 텍스트에 반영됨.
+                result.style.color = 'green';
+                result.innerHTML = '비밀번호 일치';
+            } else {
+                result.style.color = 'red';
+                result.innerHTML = '비밀번호 불일치';
+            }
+        }
+    </script>
+</head>
+<body>
+    비밀번호: <input type="text" id="pw" placeholder="비밀번호를 입력하세요."> <br>
+    <!-- onblur는 벗어났을 때 시행되는 속성. 입력할때마다 실시간 호출 및 체크하려면 onkeyup -->
+    비밀번호확인: <input type="text" id="pwCheck" onkeyup="pwCheck()" placeholder="비밀번호를 한번 더 입력하세요."> <br>
+    <span id="result"></span>
+</body>
+</html>
