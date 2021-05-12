@@ -1,0 +1,5 @@
+/* css 폴더 만들어서 joinform.css 파일 만들기 */
+/* css파일 만들면 별도 style 적용 필요x */
+body {
+    background-color: green;
+}

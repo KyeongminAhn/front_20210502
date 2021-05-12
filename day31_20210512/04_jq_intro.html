@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN... 가져다 쓰기 위한 주소가 필요(fontawesome참고) -->
+    <!-- jQuary CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+                                <!-- jQuary 버전(3.6.0) 확인 후 명시 -->
+
+    <script>
+        // ↓ 문서가 준비되면 매개변수로 넣은 콜백 함수를 실행하라는 의미
+        // ↓ 현재문서가 준비가 되면 기능 수행
+        $(document).ready(function(){
+        // id1.addEventListener("click", test1);
+        // function test1() {
+        //     console.log('test1 함수 호출됨.');
+        // }
+        //    ==
+            // id1 인 요소를 클릭했을 때 함수 호출
+            $("#id1").click(function(){
+            // DOM요소(#id / .class).클릭했을 때(기능수행) ↙
+                alert('id1을 클릭하셨네요.');
+                // alert기능 수행
+            });
+            // class1 인 요소를 클릭했을 때 함수 호출
+            $(".class1").click(function(){
+                console.log('class1 클릭');
+            });
+            // btn1을 클릭했을 때 class1을 사라지게
+            $("#btn1").click(function(){
+                $(".class1").hide();
+                // ↑ DOM요소에 접근(=document.getEle~) 
+            });
+            // btn2을 클릭했을 때 class1을 나타나게
+            $("#btn2").click(function(){
+                $(".class1").show();
+            });
+            // btn3을 클릭했을 때 id1 색을 빨갛게
+            $("#btn3").click(function(){
+                $("#id1").css("color","red");
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- jQuary: javascript 라이브러리 (javascript 문법들을 함수화)
+        cf)바닐라 자바스크립트: 순수하게 자바스크립트만 쓰자는 용어. -->
+    <h2 id="id1">내용1</h2>
+    <h3 class="class1">내용2</h3>
+    <button id="btn1">사라짐</button>
+    <button id="btn2">나타남</button>
+    <button id="btn3">색깔변경</button>
+
+    <script>
+        // 자바스크립트로 id1을 클릭했을 때 test1이라는 함수 호출하기
+        var id1 = document.getElementById('id1');
+        //                 (on을 떼고, 함수이름을 쓴다.)
+        id1.addEventListener("click", test1);
+        function test1() {
+            console.log('test1 함수 호출됨.');
+        }
+        // 위에서 아래로 읽기 때문에 아직 읽지 못했기 때문에 모르는 요소가 됨.
+    </script>
+
+</body>
+</html>
