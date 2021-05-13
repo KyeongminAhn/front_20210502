@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    
+    <script src="../joinform/joinform.js"></script>
+    
+    <link rel="stylesheet" href="../joinform/joinform.css">
+</head>
+<body>
+    <h2>회원가입</h2>
+    아이디: 
+    <input type="text" id="id" onblur="idCheck()"><br>
+    <span id="idCheck"></span><br>
+    비밀번호: 
+    <input type="text" id="pw" onblur="pwCheck()"><br>
+    <span id="pwCheck"></span><br>
+    비밀번호 확인: 
+    <input type="text" id="pw-confirm" onkeyup="pwConfirm()"><br>
+    <span id="pw-confirmResult"></span><br>
+    이름: 
+    <input type="text" id="name" onblur="nameCheck()"><br>
+    <span id="nameCheck"></span><br>
+    이메일: 
+    <input type="text">@<input type="text" id="domain">
+    <select id="emailCheck" onchange="emailSelect()">
+        <option selected>직접입력</option>
+        <option value="naver.com">naver.com</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+    </select><br>
+    <br>전화번호: 
+    <input type="text" id="phone" onblur="phoneCheck()"><br>
+    <span id="pCheck"></span><br>
+    <button class="button">회원가입</button>
+</body>
+</html>
